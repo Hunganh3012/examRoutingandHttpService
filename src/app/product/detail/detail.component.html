@@ -1,1 +1,20 @@
 <p>detail works!</p>
+<button routerLink="../product-add">Thêm</button>
+<table style="width: 100%;">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>User</th>
+    </tr>
+<tbody *ngFor="let item of result">
+    <tr >
+        <td>{{item.id}}</td>
+        <td>{{item.product}}</td>
+        <td>{{item.price}}</td>
+        <td><button>Sửa</button> <button>Lưu</button> <button>Xóa</button> </td>
+    </tr>
+
+</tbody>
+
+  </table>
