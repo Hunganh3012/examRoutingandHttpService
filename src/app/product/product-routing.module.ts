@@ -11,7 +11,7 @@ const productRoutes:Routes=[
         {
           path: '',
           component: ProductComponent,
-          
+
           children:[
             {
               path:'detail',
@@ -19,24 +19,24 @@ const productRoutes:Routes=[
               canActivate:[AuthGuard],
             },
             {
-              path:'add',
+              path:'product-add',
               component:ProductAddComponent
             },
             {
               path: "",
               component:ProductListComponent
             },
-            // {
-            //   path: ':id',
-            //   component:ProductDetailComponent
-            // },
-           
+            {
+              path: ':id',
+              component:ProductDetailComponent
+            },
+
           ]
         },
-         
+
       ];
 @NgModule({
-   
+
     imports:[
         RouterModule.forChild(productRoutes)
     ],
