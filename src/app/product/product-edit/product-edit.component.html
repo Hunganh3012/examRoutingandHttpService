@@ -1,0 +1,9 @@
+<h1>Sửa sản phẩm</h1>
+<form action="">
+    <label for="">Tên sản phẩm mới:</label>
+    <input type="text" value="{{edit.product}}" [(ngModel)]="edit.product"[ngModelOptions]="{standalone:true}">
+    <label for="">Giá sản phẩm mới:</label>
+    <input type="text" value="{{edit.price}}" [(ngModel)]="edit.price"[ngModelOptions]="{standalone:true}">
+    <button (click)="editProduct()">Sửa sản phẩm</button>
+</form>
+

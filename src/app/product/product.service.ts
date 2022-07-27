@@ -20,4 +20,10 @@ export class ProductService {
   deleteProduct(id:number){
     return this.http.delete(`${this.API_URL}/${id}`)
   }
+  getDetailProduct(id:number){
+    return this.http.get(`${this.API_URL}/${id}`)
+  }
+  editProduct( id:number,data:any){
+    return this.http.put(`${this.API_URL}/${id}`,data)
+  }
 }
