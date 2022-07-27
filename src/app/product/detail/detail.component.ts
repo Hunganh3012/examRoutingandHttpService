@@ -17,9 +17,17 @@ export class DetailComponent implements OnInit {
   getAllProduct(){
     return this.ProductService.getAllProduct().subscribe(data =>{
       this.result=data;
-      console.log(data)
+      // console.log(data)
     })
     
+  }
+  deleteProduct(id:number){
+    return this.ProductService.deleteProduct(id).subscribe(data =>{
+      this.result= this.result.filter((item : any) =>{
+        return item.id != id;
+      })
+      alert('Xóa thành công')
+    })
   }
   
 }

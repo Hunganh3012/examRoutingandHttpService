@@ -20,7 +20,8 @@ export class ProductAddComponent implements OnInit {
   addProduct(){
     this.ProductService.addProduct(this.result).subscribe(data =>{
       alert('Thêm sản phẩm thành công')
-        this.Router.navigateByUrl('/');
+        this.Router.navigateByUrl('/product/detail');
     })
   }
+
 }

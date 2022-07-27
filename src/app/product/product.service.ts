@@ -17,4 +17,7 @@ export class ProductService {
   addProduct( data:any){
     return this.http.post(this.API_URL,data)
   }
+  deleteProduct(id:number){
+    return this.http.delete(`${this.API_URL}/${id}`)
+  }
 }

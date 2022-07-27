@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from 'app/auth.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
   }
-
+  login(){
+    this.authService.login();
+   }
+  logout(){
+    this.authService.logout();
+  }
 }

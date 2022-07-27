@@ -2,8 +2,8 @@
 <h1>Thêm sản phẩm</h1>
 <form action="">
     <label for="product">Tên sản phẩm</label>
-    <input type="text" class="input-field" [(ngModel)]="result.product"  [ngModelOptions]="{standalone: true} "placeholder="Sản phẩm" name="product" id="product">
+    <input type="text" class="input-field" [(ngModel)]="result.product"  [ngModelOptions]="{standalone: true} "placeholder="Sản phẩm" name="product" id="product" >
     <label for="price">Giá sản phẩm</label>
-    <input type="text" class="input-field" [(ngModel)]="result.price"  [ngModelOptions]="{standalone: true}" placeholder="Giá tiền" name="price" id="price">
-    <button (click)="addProduct()">Cập nhật</button>
+    <input type="text" class="input-field" [(ngModel)]="result.price"  [ngModelOptions]="{standalone: true}" placeholder="Giá tiền" name="price" id="price" >
+    <input type="submit" (click)="addProduct()" value="Cập nhập">
 </form>
