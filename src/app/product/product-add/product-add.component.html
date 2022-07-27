@@ -1,8 +1,9 @@
-<button routerLink="../detail">Quay lại</button>
+<button routerLink="../product/detail">Quay lại</button>
 <h1>Thêm sản phẩm</h1>
 <form action="">
-    <input type="text" class="input-field" placeholder=" Id">
-    <input type="text" class="input-field" placeholder="Sản phẩm">
-    <input type="text" class="input-field" placeholder="Giá tiền">
-    <button>Cập nhật</button>
+    <label for="product">Tên sản phẩm</label>
+    <input type="text" class="input-field" [(ngModel)]="result.product"  [ngModelOptions]="{standalone: true} "placeholder="Sản phẩm" name="product" id="product">
+    <label for="price">Giá sản phẩm</label>
+    <input type="text" class="input-field" [(ngModel)]="result.price"  [ngModelOptions]="{standalone: true}" placeholder="Giá tiền" name="price" id="price">
+    <button (click)="addProduct()">Cập nhật</button>
 </form>

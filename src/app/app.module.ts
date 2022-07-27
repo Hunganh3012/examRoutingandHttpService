@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { DetailComponent } from './product/detail/detail.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { DetailComponent } from './product/detail/detail.component';
     ProductComponent,
     DetailComponent
   ],
-  imports: [
+  imports: [ FormsModule,
     BrowserModule,
     // ProductModule,
     // ProductRoutingModule,
